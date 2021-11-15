@@ -1,0 +1,209 @@
+
+
+.missionHeader{
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    height: 300px;
+    position: relative !important;
+   
+    background: rgb(26, 26, 26, 0.4);
+   
+   
+}
+.headText{
+    position: absolute !important;
+    top: 30% !important;
+    left:10% !important;
+    z-index: 100 !important;
+    color: white;
+    
+}
+
+.missionBody{
+    padding: 30px !important;
+    max-width: 86%;
+}
+
+.missionBody .textContent{
+   display: flex;
+   flex-direction: column;
+   width: 150px;
+
+}
+.missionBody .border {
+    align-self: center;
+    height: 5px !important;
+    width: 35px;
+    background-color: orangered;
+  
+}
+.missionBody .dates{
+    font-weight: bold !important;
+}
+
+.missionBody .missionImage{
+    width: 350px !important;
+    height: 300px !important;
+    object-fit: cover !important;
+    padding: 2px !important;
+     transition: 0.5s ease-in-out;
+     
+}
+.missionBody .col-md-4{
+    display: grid;
+    place-items: right !important;
+}
+.missionBody .imageMainWrapper{
+  
+    width: 350px;
+    height: 300px;
+    z-index: 2;
+    background-color: white;
+   box-shadow: 17px 17px #d6d6c2 !important;
+   border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgb(29, 27, 27);
+}
+.missionBody .missionImage:hover {
+ transform: scale(1.2);
+}
+
+.missionBody .imageCover{
+ 
+    background-color: rgb(179, 175, 175);
+    border-radius: 10px !important;
+
+}
+.missionBody .col-md-4{
+    position: relative;
+}
+.valuesSection .mainHeader{
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    padding: 20px !important;
+}
+.valuesSection .mainHeader .border{
+      height: 5px !important;
+      width: 35px;
+      background-color: orangered;
+}
+.valuesSection .fa{
+       width: 100px !important;
+       height: 97px !important;
+       border: 3px solid orangered !important;
+       border-radius: 40px !important;
+       transition: 0.5s ease-out !important;
+       color: orangered !important;
+       padding: 20px !important;
+       cursor: pointer !important;
+}
+.valuesSection .fa:hover{
+     border-radius: 50% !important;
+}
+.valuesMainBody .border{
+    height: 5px !important;
+    width: 35px;
+    background-color: orangered;
+}
+.AboutFooter{
+    width: 100%;
+    height: 300px;
+    
+    background-color: orangered;
+    color: white;
+}
+.AboutFooter .border{
+     height: 5px !important;
+     width: 20px;
+     background-color: white;
+}
+.AboutFooter .col-md-4{
+display: grid;
+place-items: center;
+  height: 300px;
+}
+.AboutFooter .col-content {
+    display: grid;
+    place-items: center;
+}
+
+/* Head  */
+.founder{
+    display: grid;
+    place-content: center;
+}
+
+.headStaffImage{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+.staffMain .founder{
+    padding: 30px;
+}
+.founder .col-md-4 {
+    display: grid;
+    place-items: center;
+}
+.founderText p{
+    max-width: 90%;
+}
+.otherStaff{
+     margin: 70px;
+    max-width: 86%;
+}
+.otherStaff .otherStaffText{
+    display: flex;
+   
+}
+.otherStaffImage{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.otherStaff .col-md-6{
+
+    padding: 20px !important;
+}
+.textStaff{
+    width: 450px;
+}
+/* accomplishemnt section */
+.AccoBody {
+    padding: 30px !important;
+}
+.AccoBody .accoBodyHeader {
+    display: grid;
+    place-items: center;
+}
+.accoBodyHeader .divider {
+    height: 4px !important;
+    width: 50px;
+    background-color: orangered;
+}
+.testHeader{
+    color: aqua;
+}
+.AccoBody .accoImage{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 17px 17px #d6d6c2;
+}
+.accoRow1{
+    padding: 35px !important;
+    max-width: 86%;
+}
+  .accoRow1 .accoRow1 .col-md-4 {
+    display: grid;
+    place-items: center;
+}
+.accoRow1 .accoRow1Header{
+    color: orangered;
+    font-size: 18px;
+}
+
+
+

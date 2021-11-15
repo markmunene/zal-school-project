@@ -1,0 +1,138 @@
+.departmentBody {
+    max-width: 86%;
+    padding: 50px;
+  
+   margin: auto !important;
+}
+.departmentBody .depHeadeer {
+    display: grid;
+    place-items: center;
+    padding-bottom: 10px;
+
+
+}
+
+.depHeadeer .divider {
+    background-color: #1aff1a;
+    height: 4px !important;
+    width: 50px;
+}
+.departmentBody .depImagewrapper {
+overflow: hidden;
+height: 230px;
+width: 100% !important;
+box-shadow: 17px 17px  grey;
+border-radius: 10px;
+}
+.departmentBody .depImage{
+    
+    height: 100%;
+   
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+    
+}
+.departmentBody .depImage:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.departmentBody .accoRow1Header{
+    color: orangered;
+}
+.newsWrapper .newsHeader {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+.newsHeader .divider{
+     background-color: orangered;
+     height: 4px !important;
+     width: 50px;
+     
+}
+.newsWrapper{
+    max-width: 86%;
+    margin: auto !important;
+    
+}
+.newsWrapper .newsContainer{
+position: relative;
+
+height: auto !important;
+width: 95% !important;
+box-sizing: border-box;
+border-radius: 10px !important;
+transition: 0.3s ease-in-out;
+margin: 20px !important;
+left: 10px ;
+border: 0.5px solid grey;
+
+}
+.newsWrapper .newsContainer:hover{
+    box-shadow: 4px 4px 4px 4px #e65c00 !important;
+    cursor: pointer;
+}
+.newsWrapper .newsImageWrapper{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 200px;
+    border-radius: 10px;
+
+}
+.newsWrapper .floaterBox{
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    background-color: #e65c00;
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin-top: -67px;
+     font-size: 19px;
+     font-weight: bold;
+     border-radius: 5px;
+     margin-left: 8px;
+     overflow:hidden;
+    
+}
+.newsContainer p{
+    line-height: 30px;
+    color: grey;
+    font-size: 16px;
+    font-weight: 13px;
+    max-width: 90%;
+}
+
+
+
+.rightNewsSection .rightNewsSectionHeader h2 {
+     display: grid;
+     place-items: center;
+    color: orangered;
+}
+.rightNewsSectionHeader hr {
+    height: 2px;
+    color: black;
+    background-color: black;
+}
+.rightNewsBody{
+    background-color: #ebebe0;
+}
+.newsWrapper .rightNewsBody .newsbodyContainer {
+display: flex;
+}
+.newsWrapper .rightNewsBody  .newsBodyText {
+    display: flex;
+    align-items: center;
+
+}
+
+.newsbodyContainerImage {
+    width: 150px;
+    height: 150px;
+}
+.newsWrapper .rightNewsBody .newsBodyText p:hover{
+    color: orangered;
+    cursor: pointer;
+}

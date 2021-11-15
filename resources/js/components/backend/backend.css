@@ -1,0 +1,32 @@
+.wrappper .dropdown:hover .dropdown-menu{
+    display: block !important;
+
+};
+.dropdown{
+    color: aqua !important;
+}
+ .setHomeWrapper .CalTableimage {
+    width: 70px !important;
+    height: 50px !important;
+}
+.modal-backdrop{
+    opacity: 0.0 !important;
+    z-index: 0 !important;
+    width: 0px !important;
+    height: 0px !important;
+    
+}
+.customModal{
+    width: 500px;
+    box-shadow: 17px 17px black;
+    height: auto !important;
+    z-index: 1040 !important;
+
+    margin-block: 50% !important;
+    
+
+}
+.RowBody{
+    max-width: 400px !important;
+    overflow-wrap: break-word !important;
+}
