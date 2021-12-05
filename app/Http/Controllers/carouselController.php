@@ -63,7 +63,7 @@ Carousel::create([
 
             $file->move(public_path("uploadedImages"), $imagename);
 
-            $post = Carousel::where('id', $id);
+            $post = Carousel::where('id', $id)->get();
             unlink('uploadedImages/' . $post->image);
             Carousel::where('id', $id)->update([
                 'imageName' => $req->imageName,
@@ -85,8 +85,8 @@ Carousel::create([
 
     public function delete( $id){
 
-        $post = Carousel::where('id', $id);
-        unlink('uploadedImages/'.$post->image);
+        $post = Carousel::where('id', $id)->get();
+        unlink('uploadedImages/ '.$post->image);
         $post->delete();
 
     }

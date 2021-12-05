@@ -4,11 +4,9 @@ import React, { useState, useEffect, useRef } from "react";
 
 import Paginate from "../pagination/paginate";
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
+import ReactToPrint from "react-to-print";
 
-// import '../uploadedImages'
-
-// import jQuery from "jquery";
-// import TestingModal from "./TestingModal"
+ 
 export default function Sethome() {
     const [image, setImage] = useState("");
 
@@ -43,6 +41,8 @@ export default function Sethome() {
     const modalRef = useRef({});
     const modalEdit = useRef({});
     const modalDelete = useRef({});
+    const table = useRef({});
+
 
     const getImages = async () => {
         try {
@@ -64,6 +64,22 @@ export default function Sethome() {
     // handling the image
     const handlefile = (file) => {
         setImage(file[0]);
+    };
+    const renderErrorFor = (field) => {
+        if (hasErrorFor(field)) {
+            return (
+                <span className="invalid-feedback">
+                    <strong>{errors[field][0]}</strong>
+                </span>
+            );
+        }
+    };
+
+    const hasErrorFor = (field) => {
+        return !!errors[field];
+    };
+    const hasEditErrorFor = (field) => {
+        return !!editerrors[field];
     };
 
     const editDataHandling = (items) => {
@@ -132,23 +148,6 @@ export default function Sethome() {
 
                 // console.log(err.response.errors);
             });
-    };
-
-    const hasErrorFor = (field) => {
-        return !!errors[field];
-    };
-    const hasEditErrorFor = (field) => {
-        return !!editerrors[field];
-    };
-
-    const renderErrorFor = (field) => {
-        if (hasErrorFor(field)) {
-            return (
-                <span className="invalid-feedback">
-                    <strong>{edi[field][0]}</strong>
-                </span>
-            );
-        }
     };
 
     const renderEditErrorFor = (field) => {
@@ -521,22 +520,33 @@ export default function Sethome() {
                                             {/* <!-- /.card-header --> */}
 
                                             <div
-                                                className=""
-                                                style={{ width: "40px" }}
+                                                className=" d-flex justify-content-between"
+                                                style={{ width: "60px" }}
                                             >
                                                 <ReactHTMLTableToExcel
                                                     id="test-table-xls-button"
-                                                    className=" btn btn-success"
+                                                    className=" btn btn-success mr-2"
                                                     table="reactExportExcel"
                                                     filename="tablexls"
                                                     sheet="tablexls"
                                                     buttonText="Excel"
+                                                />
+                                                <ReactToPrint
+                                                    trigger={() => (
+                                                        <button className="btn btn-success">
+                                                           PDF
+                                                        </button>
+                                                    )}
+                                                    content={() =>
+                                                        table.current
+                                                    }
                                                 />
                                             </div>
                                             <div className="card-body table-responsive p-0">
                                                 <table
                                                     className="table table-hover text-nowrap"
                                                     id="reactExportExcel"
+                                                    ref={table}
                                                 >
                                                     <thead>
                                                         <tr>
@@ -608,6 +618,8 @@ export default function Sethome() {
                                                                                                 "./uploadedImages/" +
                                                                                                 items.image
                                                                                             }
+                                                                                                width={200}
+                                                                                                height={200}
                                                                                             alt=""
                                                                                             className=" img-fluid
                                                                                                  CalTableimage"

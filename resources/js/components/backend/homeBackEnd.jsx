@@ -6,7 +6,19 @@ import { Link, Router, Switch, Route, withRouter } from "react-router-dom";
 import Sethome from "./Sethome.jsx";
 import SetHomeMarketting from "./setHomeMarketting.js";
 import RowMarketingSection from "./RowMarketingSection.jsx";
+
+import HandleUserMessages from "./handleUserMessages.jsx";
 import SetNews from "./SetNewsAndEvents.jsx";
+import SetContactUs from "./setContactUs.jsx";
+import SetContactInfo from "./SetContactInfo.jsx";
+import SetFinance from "./SetFinance.jsx";
+import SetIct from "./SetIct.jsx";
+import SetBigData from "./SetBigData.jsx";
+import SetAccomplishment from "./setAccomplishment.jsx";
+import SetAboutUsHeader from "./AboutUsHeaders.jsx";
+import SetStaff from "./setStaff.jsx";
+import SetOtherStaff from "./SetOtherStaff.jsx";
+import SetMission from "./SetMission.jsx";
 import "./backend.css";
 import { Redirect } from "react-router-dom";
 
@@ -129,7 +141,7 @@ const HomeBackEnd = (props) => {
                                                 data-toggle="tab"
                                             >
                                                 <i className="far fa-circle nav-icon"></i>
-                                                <p>Mission/vison</p>
+                                                <p>Mission/vision</p>
                                             </a>
                                         </li>
                                         <li className="nav-item">
@@ -302,24 +314,42 @@ const HomeBackEnd = (props) => {
                                 </div>
 
                                 <div className="tab-pane" id="missionTab">
-                                    <h1>fathila bana</h1>
+                                    <SetMission />
+                                    <SetAboutUsHeader />
                                 </div>
-                                <div className="tab-pane" id="staffTab"></div>
+                                <div className="tab-pane" id="staffTab">
+                                    <SetStaff />
+                                    <SetOtherStaff />
+                                </div>
                                 <div
                                     className="tab-pane"
                                     id="AccomplishmentTab"
-                                ></div>
-                                <div className="tab-pane" id="ictTab"></div>
-                                <div className="tab-pane" id="bigdataTab"></div>
+                                >
+                                    <SetAccomplishment />
+                                </div>
+                                <div className="tab-pane" id="ictTab">
+                                    <SetIct />
+                                </div>
+                                <div className="tab-pane" id="financeTab">
+                                    <SetFinance />
+                                </div>
+
+                                <div className="tab-pane" id="bigdataTab">
+                                    <SetBigData />
+
+                                </div>
                                 <div className="tab-pane" id="newsTab">
                                     {/* news and events component men! */}
 
                                     <SetNews />
                                 </div>
-                                <div
-                                    className="tab-pane"
-                                    id="ContactusTab"
-                                ></div>
+                                <div className="tab-pane" id="ContactusTab">
+                                    <HandleUserMessages />
+
+                                    <SetContactUs />
+
+                                    <SetContactInfo />
+                                </div>
                             </div>
                         </div>
                     </section>
